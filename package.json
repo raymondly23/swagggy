@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "axios": "^0.9.1",
+    "express": "^4.13.4",
+    "express-stormpath": "^3.1.2",
     "mongoose": "^4.4.12",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
