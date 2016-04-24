@@ -1,7 +1,11 @@
 var React = require('react')
 var styles = require('../../styles')
 
-function Parallax() {
+var Parallax = React.createClass({
+    componentDidMount() {
+      $('.parallax').parallax();
+    },
+  render: function() {
   return (
         <div className='parallax-container' style={styles.parallax}>
           <div className='parallax'> 
@@ -9,6 +13,7 @@ function Parallax() {
           </div>
         </div>
     )
-}
+  }
+})
 
 module.exports = Parallax

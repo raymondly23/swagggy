@@ -10,6 +10,10 @@ var styles = {
   },
   parallax: {
     height: '200px'
+  },
+  link: {
+    width: '50px',
+    padding: '0px 5px 0px 5px'
   }
 }
 

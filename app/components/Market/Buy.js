@@ -1,30 +1,43 @@
 var React = require('react')
+var ReactRouter = require('react-router')
+var Link = ReactRouter.Link
 
-function Buy() {
-  return (
-    <div className='container center'>
-      <table>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Seller</th>
-            <th>What your selling</th>
-            <th>What size</th>
-            <th>Details</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>3/26/2016</td>
-            <td>SwagggyRay</td>
-            <td>Yeezy</td>
-            <td>9</td>
-            <td><button className='btn'>Details</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  )
-}
+var Buy = React.createClass({
+  getInitialState() {
+      return {
+          datas: [{date: 'today', seller: 'swagggyray', item: 'yeezy', size: '9', id: 1}, {date: 'yesterday', seller: 'swagggyray', item: "1's" , size: 9, id: 2}]  
+      };
+  },
+  render: function() {
+    return (
+      <div className='container center'>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Seller</th>
+              <th>What your selling</th>
+              <th>What size</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.state.datas.map(function(data) {
+                return (
+                  <tr key={data.id}>
+                  <td>{data.date}</td>
+                  <td>{data.seller}</td>
+                  <td>{data.item}</td>
+                  <td>{data.size}</td>
+                  <td><Link to='/Market/Details'><button className='btn'>Details</button></Link></td>
+                  </tr>
+                )
+              })}
+          </tbody>
+        </table>
+      </div>
+    )
+  }
+})
 
 module.exports = Buy

@@ -11,14 +11,16 @@ var MarketContainer = require('../containers/MarketContainer')
 var Buy = require('../components/Market/Buy')
 var Sell = require('../components/Market/Sell')
 var Trade = require('../components/Market/Trade')
+var Details = require('../components/Market/Details')
 var ShoesContainer = require('../containers/ShoesContainer')
 var Shoes = require('../components/Shoes/Shoes')
-var LegitCheck = require('../components/Shoes/LegitCheck')
-var Value = require('../components/Shoes/Value')
-var Compare = require('../components/Shoes/Compare')
+var FindShoe = require('../components/Shoes/FindShoe')
+var ShoeDetail = require('../components/Shoes/ShoeDetail')
 var Calendar = require('../components/Shoes/Calendar')
-var Clothes = require('../components/Clothes')
-var Music = require('../components/Music')
+var ClothesContainer = require('../containers/ClothesContainer')
+var Clothes = require('../components/Clothes/Clothes')
+var MusicContainer = require('../containers/MusicContainer')
+var Music = require('../components/Music/Music')
 
 
 var routes = (
@@ -30,16 +32,20 @@ var routes = (
           <Route path='Buy' component={Buy}/>
           <Route path='Sell' component={Sell}/>
           <Route path='Trade' component={Trade}/>
+          <Route path='Details' component={Details}/>
         </Route>
         <Route path='Shoes' component={ShoesContainer}>
           <IndexRoute component={Shoes}/>
-          <Route path='LegitCheck' component={LegitCheck}/>
-          <Route path='Value' component={Value}/>
-          <Route path='Compare' component={Compare}/>
+          <Route path='FindShoe' component={FindShoe}/>
           <Route path='Calendar' component={Calendar}/>
+          <Route path='ShoeDetail' component={ShoeDetail}/>
         </Route>
-        <Route path='Clothes' component={Clothes}/>
-        <Route path='Music' component={Music}/>
+        <Route path='Clothes' component={ClothesContainer}>
+          <IndexRoute component={Clothes}/>
+        </Route>
+        <Route path='Music' component={MusicContainer}>
+          <IndexRoute component={Music}/>
+        </Route>
       </Route>
     </Router>
   )

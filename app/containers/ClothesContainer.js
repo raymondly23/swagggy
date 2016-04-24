@@ -3,16 +3,16 @@ var ReactRouter = require('react-router')
 var Link = ReactRouter.Link
 var styles = require('../styles')
 
-function ShoesContainer(props) {
+function ClothesContainer(props) {
   return (
     <div className='center'>
-      <h1>Shoes</h1>
+      <h1>Clothes</h1>
       <div style={styles.row}>
-      <Link to='/Shoes/FindShoe'>
-        <h5 style={styles.links}>Find Shoe</h5>
+      <Link to='/Clothes/TopBrands'>
+        <h5 style={styles.links}>Top Brands</h5>
       </Link>   
-      <Link to='/Shoes/Calendar'>
-        <h5 style={styles.links}>Release Calendar</h5>
+      <Link to='/Clothes/LocalBrands'>
+        <h5 style={styles.links}>Local Brands</h5>
       </Link>
       </div>
       {props.children}
@@ -20,4 +20,4 @@ function ShoesContainer(props) {
   )
 }
 
-module.exports = ShoesContainer
+module.exports = ClothesContainer

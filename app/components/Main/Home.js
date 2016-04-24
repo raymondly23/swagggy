@@ -2,9 +2,6 @@ var React = require('react')
 var Slider = require('./Slider')
 
 var Home = React.createClass({
-    componentDidMount() {
-      $('.slider').slider({full_width: true})
-    },
   render: function() {
     return (
       <div className='container center'>
