@@ -1,12 +1,12 @@
-var React = require('react')
-var styles = require('../../styles')
+const React = require('react')
+const styles = require('../../styles')
 
-var Parallax = React.createClass({
+const Parallax = React.createClass({
     componentDidMount() {
       $('.parallax').parallax();
-    },
-  render: function() {
-  return (
+    },  
+    render: function() {
+      return (
         <div className='parallax-container' style={styles.parallax}>
           <div className='parallax'> 
             <img src="http://i.imgur.com/69NzMBw.jpg?1" style={styles.pic}/>

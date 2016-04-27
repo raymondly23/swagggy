@@ -1,7 +1,7 @@
-var React   = require('react')
-var ReactRouter = require('react-router')
-var Link = ReactRouter.Link
-var styles = require('../../styles')
+const React   = require('react')
+const ReactRouter = require('react-router')
+const Link = ReactRouter.Link
+const styles = require('../../styles')
 
 function Navbar() {
   return (

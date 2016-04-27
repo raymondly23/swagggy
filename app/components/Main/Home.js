@@ -1,7 +1,7 @@
-var React = require('react')
-var Slider = require('./Slider')
+const React = require('react')
+const Slider = require('./Slider')
 
-var Home = React.createClass({
+const Home = React.createClass({
   render: function() {
     return (
       <div className='container center'>

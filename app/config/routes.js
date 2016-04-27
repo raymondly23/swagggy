@@ -25,6 +25,7 @@ var Music = require('../components/Music/Music')
 
 var routes = (
     <Router history={hashHistory}>
+      <Route path='favicon.ico'/>
       <Route path='/' component={MainContainer}>
         <IndexRoute component={Home}/>
         <Route path='Market' component={MarketContainer}>

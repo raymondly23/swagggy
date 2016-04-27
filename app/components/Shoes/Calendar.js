@@ -10,7 +10,7 @@ function Calendar() {
         <div className="col s4">
         <div>
           <h5>April</h5>
-          <p>27 - Nike Kyrie 2 - Team Red </p>
+          <a className="modal-trigger" href='#modal2'>27 - Nike Kyrie 2 - Team Red </a>
           <p>27 - Retro 10 NYC - Black/Gold</p>
           <p>30 - Retro 1 HI - 'Letterman'</p>
           <p>30 - Kids Retro 6 - Grey/Glow</p>

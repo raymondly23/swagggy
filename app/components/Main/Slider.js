@@ -1,10 +1,10 @@
-var React = require('react')
-var styles = require('../../styles')
+const React = require('react')
+const styles = require('../../styles')
 
-var Slider = React.createClass({
-    componentDidMount() {
-      $('.slider').slider({full_width: true})
-    },
+const Slider = React.createClass({
+  componentDidMount() {
+   $('.slider').slider({full_width: true})
+  },
   render: function() {
   return (
       <div className="slider">
