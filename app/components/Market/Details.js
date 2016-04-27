@@ -2,7 +2,7 @@ var React = require('react')
 var Slider = require('../Main/Slider')
 
 var Details = React.createClass({
-    getInitialState() {
+    getInitialState: function() {
         return {
             seller : {name: 'ray', item: 'jays', size: 9, price: '$1000'}  
         }

@@ -2,7 +2,7 @@ const React = require('react')
 const styles = require('../../styles')
 
 const Parallax = React.createClass({
-    componentDidMount() {
+    componentDidMount: function() {
       $('.parallax').parallax();
     },  
     render: function() {

@@ -1,12 +1,12 @@
 const React = require('react')
 
 const ImgModal = React.createClass({
-  getInitialState() {
+  getInitialState: function() {
       return {
         img :"http://cdn.iofferphoto.com/img3/wantad/198/989/7/yeezy-2-black-solar-red.jpg"
       }
   },
-  componentDidMount() {
+  componentDidMount: function() {
     $('.modal-trigger').leanModal();
   },
   render: function() {

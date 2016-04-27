@@ -3,7 +3,7 @@ var ReactRouter = require('react-router')
 var Link = ReactRouter.Link
 
 var Buy = React.createClass({
-  getInitialState() {
+  getInitialState: function() {
       return {
           datas: [{date: 'today', seller: 'swagggyray', item: 'yeezy', size: '9', id: 1}, {date: 'yesterday', seller: 'swagggyray', item: "1's" , size: 9, id: 2}]  
       };

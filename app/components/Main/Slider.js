@@ -2,7 +2,7 @@ const React = require('react')
 const styles = require('../../styles')
 
 const Slider = React.createClass({
-  componentDidMount() {
+  componentDidMount: function() {
    $('.slider').slider({full_width: true})
   },
   render: function() {
