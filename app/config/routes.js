@@ -1,29 +1,26 @@
-var React = require('react')
-var ReactRouter = require('react-router')
-var Router = ReactRouter.Router
-var Route = ReactRouter.Route
-var hashHistory = ReactRouter.hashHistory
-var IndexRoute = ReactRouter.IndexRoute
-var MainContainer = require('../containers/MainContainer')
-var Home = require('../components/Main/Home')
-var Market = require('../components/Market/Market')
-var MarketContainer = require('../containers/MarketContainer')
-var Buy = require('../components/Market/Buy')
-var Sell = require('../components/Market/Sell')
-var Trade = require('../components/Market/Trade')
-var Details = require('../components/Market/Details')
-var ShoesContainer = require('../containers/ShoesContainer')
-var Shoes = require('../components/Shoes/Shoes')
-var FindShoe = require('../components/Shoes/FindShoe')
-var ShoeDetail = require('../components/Shoes/ShoeDetail')
-var Calendar = require('../components/Shoes/Calendar')
-var ClothesContainer = require('../containers/ClothesContainer')
-var Clothes = require('../components/Clothes/Clothes')
-var MusicContainer = require('../containers/MusicContainer')
-var Music = require('../components/Music/Music')
+const React = require('react')
+const ReactRouter = require('react-router')
+const { Route, Router, hashHistory, IndexRoute } = ReactRouter
+const MainContainer = require('../containers/MainContainer')
+const Home = require('../components/Main/Home')
+const Market = require('../components/Market/Market')
+const MarketContainer = require('../containers/MarketContainer')
+import Buy from '../components/Market/Buy'
+import Sell from '../components/Market/Sell'
+const Trade = require('../components/Market/Trade')
+const Details = require('../components/Market/Details')
+const ShoesContainer = require('../containers/ShoesContainer')
+const Shoes = require('../components/Shoes/Shoes')
+const FindShoe = require('../components/Shoes/FindShoe')
+const ShoeDetail = require('../components/Shoes/ShoeDetail')
+const Calendar = require('../components/Shoes/Calendar')
+const ClothesContainer = require('../containers/ClothesContainer')
+const Clothes = require('../components/Clothes/Clothes')
+const MusicContainer = require('../containers/MusicContainer')
+const Music = require('../components/Music/Music')
 
 
-var routes = (
+const routes = (
     <Router history={hashHistory}>
       <Route path='favicon.ico'/>
       <Route path='/' component={MainContainer}>

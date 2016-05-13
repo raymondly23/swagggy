@@ -1,7 +1,7 @@
 const React = require('react')
 
 const MessageModal = React.createClass({
-  componentDidMount() {
+  componentWillMount() {
     $('.modal-trigger').leanModal();
   },
   render: function() {

@@ -1,17 +1,37 @@
-var React = require('react')
-var ReactRouter = require('react-router')
-var Link = ReactRouter.Link
+const React = require('react')
+const ReactRouter = require('react-router')
+const Link = ReactRouter.Link
+import MarketStore from "../../stores/MarketStore"
+import Market from "../../stores/Market"
 
-var Buy = React.createClass({
-  getInitialState() {
-      return {
-          datas: [{date: 'today', seller: 'swagggyray', item: 'yeezy', size: '9', id: 1}, {date: 'yesterday', seller: 'swagggyray', item: "1's" , size: 9, id: 2}]  
-      };
-  },
-  render: function() {
+
+export default class Buy extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      datas: MarketStore.getAll()
+    }
+  }
+
+  componentWillMount() {
+    MarketStore.on("change", () => {
+      this.setState({
+        datas: MarketStore.getAll()
+      })
+    })
+  }
+
+  render() {
+
+    const { datas } = this.state
+
+    const MarketComponents = datas.map((data) => {
+      return <Market key={data.id} {...data}/>
+    })
+
     return (
       <div className='container center'>
-        <table>
+         <table>
           <thead>
             <tr>
               <th>Date</th>
@@ -21,23 +41,10 @@ var Buy = React.createClass({
               <th>Details</th>
             </tr>
           </thead>
-          <tbody>
-            {this.state.datas.map(function(data) {
-                return (
-                  <tr key={data.id}>
-                  <td>{data.date}</td>
-                  <td>{data.seller}</td>
-                  <td>{data.item}</td>
-                  <td>{data.size}</td>
-                  <td><Link to='/Market/Details'><button className='btn'>Details</button></Link></td>
-                  </tr>
-                )
-              })}
-          </tbody>
-        </table>
+        <tbody>{MarketComponents}</tbody>
+      </table>
       </div>
     )
   }
-})
+}
 
-module.exports = Buy
