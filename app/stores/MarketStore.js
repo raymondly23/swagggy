@@ -2,6 +2,7 @@ import { EventEmitter } from "events"
 import dispatcher from '../dispatcher'
 
 class MarketStore extends EventEmitter {
+
   constructor() {
     super()
     this.sell = [
@@ -25,6 +26,7 @@ class MarketStore extends EventEmitter {
     sellShoe(item) {
       const id = Date.now()
       item.id = id
+      item.date = Date.now()
       this.sell.push(item)
       this.emit("change")
     }
@@ -34,9 +36,9 @@ class MarketStore extends EventEmitter {
     }
 
     handleActions(action) {
-      switch(action.type) {
+      switch(action.item.type) {
         case 'CREATE_POST' : {
-          this.sellShoe(action)
+          this.sellShoe(action.item)
         }
       }
     }
