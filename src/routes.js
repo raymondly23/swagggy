@@ -1,8 +1,6 @@
-import React from 'react';
-import { Route, IndexRoute } from 'react-router';
-import App from './components/App';
-
-
+const React = require('react')
+const ReactRouter = require('react-router')
+const { Route, Router, hashHistory, IndexRoute } = ReactRouter
 const MainContainer = require('../containers/MainContainer')
 const Home = require('../components/Main/Home')
 const Market = require('../components/Market/Market')
@@ -22,7 +20,9 @@ const MusicContainer = require('../containers/MusicContainer')
 const Music = require('../components/Music/Music')
 
 
-export default (
+const routes = (
+    <Router history={hashHistory}>
+      <Route path='favicon.ico'/>
       <Route path='/' component={MainContainer}>
         <IndexRoute component={Home}/>
         <Route path='Market' component={MarketContainer}>
@@ -45,6 +45,8 @@ export default (
           <IndexRoute component={Music}/>
         </Route>
       </Route>
-  );
+    </Router>
+  )
   
 
+module.exports = routes

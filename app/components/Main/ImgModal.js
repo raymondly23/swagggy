@@ -12,9 +12,9 @@ const ImgModal = React.createClass({
   render: function() {
     return (
       <div id="modal2" className="modal">
-    <div className="modal-content">
-      <img src={this.state.img} alt=""/>
-    </div>
+        <div className="modal-content">
+          <img src={this.state.img} alt=""/>
+        </div>
     </div>
     )
   }
