@@ -1,9 +1,10 @@
 import React from 'react';
+import Slider from '../common/Slider';
 
 class HomePage extends React.Component {
   render() {
     return (
-      <div className='container center'>
+      <div className="container center">
         <Slider/>
         <p>An app that helps finds the value of shoes,</p>
         <p>where you can buy/sell shoes,</p>
