@@ -5,8 +5,12 @@ import configureStore from './store/configureStore';
 import {Provider} from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 import routes from './routes';
+import { loadShoes } from './actions/marketActions';
+
 
 const store = configureStore();
+store.dispatch(loadShoes());
+
 render (
   <Provider store={store}>
     <Router history={browserHistory} routes={routes}/>

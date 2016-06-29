@@ -7,10 +7,6 @@ import Footer from './common/Footer';
 class App extends React.Component {
   constructor(props, context) {
     super(props, context); 
-    this.state = {
-
-    };
-      
   }
   
   componentDidMount() {
@@ -20,7 +16,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div>
         <Parallax/>
         <Navbar/>
         <br/>
