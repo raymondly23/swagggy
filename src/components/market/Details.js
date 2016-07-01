@@ -3,7 +3,7 @@ import Slider from '../common/Slider';
 
 class Details extends React.Component{
   constructor(props) {
-    super(props)
+    super(props);
   }
   render() {
     return (
@@ -11,7 +11,7 @@ class Details extends React.Component{
         <h1>details</h1>
         <Slider/>
       </div>
-    )
+    );
   }
 }
 

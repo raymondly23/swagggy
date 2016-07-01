@@ -20,7 +20,7 @@ class Buy extends React.Component {
 }
 
 Buy.propTypes = {
-  shoes : PropTypes.array
+  shoes : PropTypes.array.isRequired
 };
 
 function mapStateToProps(state, ownProps) {
