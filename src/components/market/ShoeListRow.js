@@ -6,8 +6,9 @@ const ShoeListRow = ({shoe}) => {
     <tr>
       <td>{shoe.date}</td>
       <td>{shoe.seller}</td>
-      <td>{shoe.item}</td>
+      <td>{shoe.shoe}</td>
       <td>{shoe.size}</td>
+      <td>{shoe.condition}/10</td>
       <td><Link to="/Market/Details"><button className="btn btn-info">Details</button></Link></td>
     </tr>
   );

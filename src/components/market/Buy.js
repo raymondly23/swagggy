@@ -12,8 +12,9 @@ class Buy extends React.Component {
   render() {
    const {shoes} = this.props;
     return (
-      <div className="container center">
+      <div className="container">
         <ShoeList shoes={shoes}/>
+        {console.log('shoes', shoes)}
       </div>
     );
   }

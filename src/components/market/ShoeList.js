@@ -10,6 +10,7 @@ const ShoeList = ({shoes}) => {
           <th>Seller</th>
           <th>Selling</th>
           <th>Size</th>
+          <th>Condition</th>
           <th>Details</th>
         </tr>
       </thead>

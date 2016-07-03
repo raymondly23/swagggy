@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as marketActions from '../../actions/marketActions';
 import ShoeForm from './ShoeForm';
+import moment from 'moment';
 
 class Sell extends React.Component {
   constructor(props, context) {
@@ -20,6 +21,7 @@ class Sell extends React.Component {
     let shoe = this.state.shoe;
     const field = event.target.name;
     shoe[field] = event.target.value;
+    console.log(shoe)
     return this.setState({shoe: shoe});
   }
 
@@ -58,7 +60,12 @@ Sell.contextTypes = {
 };
 
 function mapStateToProps(state, ownProps) {
-  let shoe = {item: '', size: ''};
+  let shoe = {shoe:"", 
+              size: "", 
+              condition: "", 
+              details: "", 
+              files: "", 
+              date: moment().format("MM" + "/" + "DD" + "/" + "YYYY")};
   return {
     shoe : shoe
   };

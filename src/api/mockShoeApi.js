@@ -3,19 +3,23 @@ import delay from './delay';
 const shoes = [
   {
     id: 1,
-    date: '3/26/93',
+    date: '3/26/1993',
     seller: "Ray",
-    item: "bred 1s",
-    size: 9
+    shoe: "bred 1s",
+    size: 9,
+    condition: 10
   },  
   {
     id: 2,
-    date: '4/26/93',
+    date: '4/26/1993',
     seller: "SwagRay",
-    item: "bred 2s",
-    size: 10
+    shoe: "bred 2s",
+    size: 10,
+    condition: 10
   }
   ];
+
+  const trades = [];
 
 function replaceAll(str, find, replace) {
   return str.replace(new RegExp(find, 'g'), replace);
@@ -23,7 +27,7 @@ function replaceAll(str, find, replace) {
 
 //This would be performed on the server in a real app. Just stubbing in.
 const generateId = (shoe) => {
-  return replaceAll(shoe.item, ' ', '-');
+  return replaceAll(shoe.shoe, ' ', '-');
 };
 
 class ShoeApi {
@@ -41,7 +45,7 @@ class ShoeApi {
       setTimeout(() => {
         // Simulate server-side validation
         const minLength = 1;
-        if (shoe.item.length < minLength) {
+        if (shoe.shoe.length < minLength) {
           reject(`Title must be at least ${minLength} characters.`);
         }
 

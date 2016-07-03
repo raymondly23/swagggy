@@ -1,6 +1,7 @@
 import React from 'react';
 import TextInput from '../common/TextInput';
 import SelectInput from '../common/SelectInput';
+import FileInput from '../common/FileInput'
 
 const ShoeForm = ({shoe, onSave, onChange, saving, errors}) => {
   return (
@@ -8,30 +9,49 @@ const ShoeForm = ({shoe, onSave, onChange, saving, errors}) => {
       <h1>Post your shoe for sale!</h1>  
       <div className="row">
       <TextInput  
-        style="col s8"
-        name="Shoe"
-        value={shoe.item}
+        type="text"
+        classes="col s8"
+        placeholder="What you're selling"
+        name="shoe"
+        value={shoe.shoe}
         onChange={onChange} 
         error={errors}/>
 
       <TextInput
-        style="col s4"
-        name="Size"
+        type="number"
+        classes="col s2"
+        placeholder="Size"
+        name="size"
         value={shoe.size}
         onChange={onChange}
+        error={errors}/>      
+
+        <TextInput
+        type="number"
+        classes="col s2"
+        placeholder="Condition out of 10"
+        name="condition"
+        value={shoe.condition}
+        onChange={onChange}
         error={errors}/>
-      </div>      
-      
+      </div>   
+
       <textarea 
-        className="materialize-textarea"
+        classes="col s8"
+        className="materialize-textarea col s8"
         placeholder="Details of the shoe"
-        name="Details" 
+        name="details" 
         value={shoe.details} 
         onChange={onChange}
         cols="30" 
         rows="10" 
         error={errors}>
         </textarea>
+
+      <FileInput
+        name="files"
+        value={'sosodfasd'}
+        onChange={onChange}/>
 
       <input 
         type="submit"
